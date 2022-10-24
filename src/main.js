@@ -5,11 +5,11 @@ import data from './data/ghibli/ghibli.js';
 const movieContainer = document.getElementById("movieContainer");
 const ghibliData = data.films;
 const movieElement = document.createElement("div");
-movieElement.classList.add("movie");
+movieElement.classList.add("cards");
 ghibliData.forEach((movie)=>{
 	console.log(movie);
   const movieInnerHTML = `
-    <div class="movie" id="movie">
+    <div class="movie" id="${movie.title}">
     	<div class="poster-container" id="poster">
       	<img class="img" src=${movie.poster} alt="Poster Castle_in_the_Sky"></img>
     	</div>
