@@ -11,6 +11,7 @@ body{
     display:flex;
     font-family: "Work sans";
     background-color: #FFF4D8;
+    background: linear-gradient(to bottom, #FFF4D8, #ffe298);
     flex-direction: column;
     justify-content: center;
     margin: 0;
