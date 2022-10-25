@@ -11,11 +11,11 @@ ghibliData.forEach((movie)=>{
   const movieInnerHTML = `
     <div class="movie" id="${movie.title}">
     	<div class="poster-container" id="poster">
-      	<img class="img" src=${movie.poster} alt="Poster Castle_in_the_Sky"></img>
+      		<img class="img" src=${movie.poster} alt="Poster Castle_in_the_Sky"></img>
     	</div>
     	<div>
     		<h3 class="movie-name">${movie.title}</h3>
-      	<p class="year">${movie.release_date}</p>
+      		<p class="year">${movie.release_date}</p>
     	</div>
 		</div>
 	`;

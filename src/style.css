@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Voces&family=Work+Sans:wght@700&display=swap');
 
-*{
+ *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+    /* border: 1px solid rgb(33, 189, 16); */
+} 
 
 body{
     display:flex;
@@ -13,31 +14,32 @@ body{
     background-color: #FFF4D8;
     background: linear-gradient(to bottom, #FFF4D8, #ffe298);
     flex-direction: column;
-    justify-content: center;
+    justify-content:center;
     margin: 0;
+    /* border: 1px solid rgb(189, 16, 134); */
 }
 
 header{
     margin-top: 10px;
     margin-left: 30px;
     margin-bottom: 60px;
-    text-align: left;
+    text-align: center;
     letter-spacing: 2px;
 }
 .cards{
     display: flex;
     flex-wrap: wrap;
     align-items: space-between;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0 auto;
     max-width: 1200px;
-    /*border: 2px solid crimson;*/
+    /* border: 2px solid crimson; */
 }
 .movie{
-    /*border: 2px solid blue;*/
+    /* border: 2px solid blue; */
     border-radius: 15px;
     width: 300px;
-    height: 430px;
+    height: 450px;
     margin: 10px;
     padding: 20px;
 }
@@ -61,4 +63,36 @@ header{
 .year{
     margin-left: 5px;
     font-family: "Voces";
+}
+/* desde aquí dará instrucciones para tablets */
+@media only screen and (min-width: 600px) { 
+    .movie{
+        /* border: 2px solid rgb(0, 255, 221); */
+    }
+    header{
+        margin-top: 10px;
+        margin-left: 30px;
+        margin-bottom: 60px;
+        text-align: left;
+        letter-spacing: 2px;
+    }
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: space-between;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 1200px;
+        /* border: 2px solid crimson; */
+    }
+
+}
+
+/* desde aquí dará instrucciones para escritorio */
+@media only screen and (min-width: 768px) {
+    .movie{
+        /* border: 2px solid rgb(140, 0, 255); */
+        
+    }
+
 }
