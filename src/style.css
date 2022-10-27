@@ -12,7 +12,7 @@ body{
     display:flex;
     font-family: "Work sans";
     background-color: #FFF4D8;
-    background: linear-gradient(to bottom, #FFF4D8, #ffe298);
+    background: linear-gradient(to bottom, #FFF4D8, #ffe9b0);
     flex-direction: column;
     justify-content:center;
     margin: 0;
@@ -20,11 +20,42 @@ body{
 }
 
 header{
+    display: flex;
+    justify-content: space-between;
     margin-top: 10px;
     margin-bottom: 60px;
     text-align: center;
     letter-spacing: 2px;
+    /*border: black solid 2px;*/
 }
+
+.ghibliLogo {
+    width: 253px;
+    height: 117px;
+}
+
+.logo {
+    width: 253px;
+    height: 117px;   
+}
+
+.btn-search {
+    width: 47px;
+    height: 47px;
+    margin-right: 15px;
+    border-color: #51196B;
+    border-width: 3px;
+    border-radius: 6px;
+    border-style: solid;
+    background-color: #FFF4D8;
+    margin-top: 60px;
+}
+
+.icon-search {
+    width: 27px;
+    height: 27px; 
+}
+
 .cards{
     display: flex;
     flex-wrap: wrap;
@@ -38,23 +69,23 @@ header{
     /*border: 2px solid blue;*/
     border-radius: 15px;
     width: 150px;
-    height: 270px;
+    height: 225px;
     margin: 10px;
     padding: 20px;
 }
 .movie:hover{
-    background-color: #ffe298;
+    background-color: #fddd8a;
 }
 .movie .poster-container{
     border-radius: 15px;
     width: 100px;
-    height: 160px;
+    height: 140px;
     margin: 5px;
 }
 .img{
     margin-top: -10px;
     width: 100px;
-    height: 160px;
+    height: 140px;
     border-radius: 10px;
 }
 .movie-name{
@@ -69,23 +100,72 @@ header{
     font-family: "Voces";
 }
 /* desde aquí dará instrucciones para tablets */
+
+
 @media only screen and (min-width: 600px) { 
-    header{
-        margin-top: 10px;
-        margin-left: 30px;
-        margin-bottom: 60px;
-        text-align: left;
-        letter-spacing: 2px;
+
+header{
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-bottom: 60px;
+    text-align: left;
+    letter-spacing: 2px;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-between;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+    /* border: 2px solid crimson; */
+}
+
+.movie{
+    /* border: 2px solid blue; */
+    border-radius: 15px;
+    width: 300px;
+    height: 450px;
+    margin: 10px;
+    padding: 20px;
+}
+
+.movie .poster-container{
+    border-radius: 15px;
+    width: 250px;
+    height: 350px;
+    margin: 5px;
+}
+
+.img{
+    margin-top: -10px;
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+}
+
+.movie-name{
+    font-family: "Voces";
+    margin-top: -7px;
+    margin-left: 5px;
+}
+
+.year{
+    margin-left: 5px;
+    font-family: "Voces";
+}
+
+}
+
+
+/* desde aquí dará instrucciones para escritorio */
+@media only screen and (min-width: 768px) {
+    .movie{
+        /* border: 2px solid rgb(140, 0, 255); */
+        
     }
-    .cards{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: space-between;
-        justify-content: space-between;
-        margin: 0 auto;
-        max-width: 1200px;
-        /* border: 2px solid crimson; */
-    }
+
     .movie{
         /* border: 2px solid blue; */
         border-radius: 15px;
@@ -94,6 +174,7 @@ header{
         margin: 10px;
         padding: 20px;
     }
+
     .movie .poster-container{
         border-radius: 15px;
         width: 250px;
@@ -114,15 +195,6 @@ header{
     .year{
         margin-left: 5px;
         font-family: "Voces";
-    }
-
-}
-
-/* desde aquí dará instrucciones para escritorio */
-@media only screen and (min-width: 768px) {
-    .movie{
-        /* border: 2px solid rgb(140, 0, 255); */
-        
     }
 
 }
