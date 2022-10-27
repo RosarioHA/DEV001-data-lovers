@@ -112,6 +112,16 @@ header{
     letter-spacing: 2px;
 }
 
+.ghibliLogo {
+    width: 436px;
+    height: 202px;
+}
+
+.logo {
+    width: 436px;
+    height: 202px;   
+}
+
 .cards{
     display: flex;
     flex-wrap: wrap;
@@ -161,11 +171,6 @@ header{
 
 /* desde aquí dará instrucciones para escritorio */
 @media only screen and (min-width: 768px) {
-    .movie{
-        /* border: 2px solid rgb(140, 0, 255); */
-        
-    }
-
     .movie{
         /* border: 2px solid blue; */
         border-radius: 15px;
