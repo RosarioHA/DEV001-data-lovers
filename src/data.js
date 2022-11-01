@@ -16,7 +16,7 @@ export default function searchFilters (input, selector) {
   if (e.target.matches(input)) {
     console.log(e.target.value, "estoy en data.js");
     inputSearch.querySelectorAll(selector).forEach ((el) =>
-    el.textContent.toLowerCase().includes(e.target.value)
+    el.innerText.toLowerCase().includes(e.target.value)
     ? el.classList.remove("filter")
     : el.classList.add("filter")
     );
