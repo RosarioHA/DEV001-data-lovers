@@ -47,6 +47,7 @@ ghibliData.forEach((movie)=>{
 //     })
 // })
 
+
 inputSearch.addEventListener("input", (event) => filterData (event.target.value)) 
 function filterData (searchTerm) {
 	movieItems.forEach(item => {
