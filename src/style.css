@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Voces&family=Work+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
 
  *{
     margin: 0;
@@ -10,7 +11,7 @@
 
 body{
     display:flex;
-    font-family: "Work sans";
+    font-family: 'Roboto', sans-serif;
     background-color: #FFF4D8;
     background: linear-gradient(to bottom, #FFF4D8, #ffe9b0);
     flex-direction: column;
@@ -23,14 +24,13 @@ header{
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     text-align: center;
     letter-spacing: 2px;
     /*border: black solid 2px;*/
 }
 
 main{
-    padding: 20px;
     align-items: space-between;
     justify-content: center;
 }
@@ -44,50 +44,43 @@ main{
     width: 253px;
     height: 117px;   
 }
-
-
-.icon-menu{
-    align-content:space-around;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-area: auto;
-
+#menuBar {
+    display: flex;
+    width: 100%;
+    height: 45px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    background: #51196B;
 }
-
 .cards-filter {
     width: 200px;
-    height: 40px;
+    height: 35px;
+    padding: 5px;
+    background: #5b336e;
+    color: #FFF9EC;
     margin-right: 15px;
     border: 3px solid #51196B; 
-    border-radius: 6px;  
+    border-radius: 6px;
 }
 .cards-filter:focus {
     outline: none;
 }
-
-.btn-search {
-    width: 47px;
-    height: 47px;
-    margin-right: 15px;
-    border-color: #51196B;
-    border-width: 3px;
-    border-radius: 6px;
-    border-style: solid;
-    background-color: #FFF4D8;
+.cards-filter::placeholder {
+    color: #faf0d8;
 }
-
-.icon-search {
+.icon-search{
     width: 27px;
-    height: 27px; 
+    height: 27px;
+    margin-left: 0px;
 }
-
 .movie-container{
     display: flex;
     flex-wrap: wrap;
     align-items: space-between;
     justify-content: center;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 100%;
     /* border: 2px solid crimson; */
 }
 
@@ -95,7 +88,7 @@ main{
     /*border: 2px solid blue;*/
     border-radius: 15px;
     width: 150px;
-    height: 225px;
+    height: 243px;
     margin: 10px;
     padding: 20px;
 }
@@ -120,8 +113,8 @@ main{
 }
 
 .movie-name{
-    font-family: "Voces";
     font-size: 1em;
+    letter-spacing: 0.7px;
     margin-top: -7px;
     margin-left: 5px;
 }
@@ -129,7 +122,8 @@ main{
 .year{
     margin-top: 1px;
     margin-left: 5px;
-    font-family: "Voces";
+    font-weight: 100;
+    letter-spacing: 0.2px;
 }
 
 .movie-container div.hide {
@@ -148,22 +142,46 @@ header{
 }
 
 .ghibliLogo {
-    width: 436px;
-    height: 202px;
+    width: 307px;
+    height: 143px;
 }
 
 .logo {
-    width: 436px;
-    height: 202px;   
+    width: 307px;
+    height: 143px;   
+}
+main{
+    padding: 20px;
+    align-items: space-between;
+    justify-content: center;
 }
 #menuBar {
+    display: flex;
     width: 100%;
     height: 50px;
-
+    padding: 20px;
+    align-items: center;
+    justify-content: flex-end;
     border-radius: 6px;
     background: #51196B;
 }
 
+.cards-filter {
+    width: 200px;
+    height: 35px;
+    padding: 5px;
+    background: #5b336e;
+    color: #FFF9EC;
+    margin-right: 15px;
+    border: 3px solid #51196B; 
+    border-radius: 6px;  
+}
+.cards-filter:focus {
+    outline: none;
+}
+.cards-filter::placeholder {
+    color: #faf0d8;
+}
 .movie-containers{
     display: flex;
     flex-wrap: wrap;
@@ -177,35 +195,35 @@ header{
 .movie{
     /* border: 2px solid blue; */
     border-radius: 15px;
-    width: 300px;
-    height: 450px;
+    width: 240px;
+    height: 370px;
     margin: 10px;
     padding: 20px;
 }
 
 .movie .poster-container{
     border-radius: 15px;
-    width: 250px;
-    height: 350px;
+    width: 190px;
+    height: 280px;
     margin: 5px;
 }
 
 .img{
     margin-top: -10px;
-    width: 250px;
-    height: 350px;
+    width: 190px;
+    height: 280px;
     border-radius: 10px;
 }
 
 .movie-name{
-    font-family: "Voces";
     margin-top: -7px;
     margin-left: 5px;
+    font-size: 1.1em;
 }
 
 .year{
     margin-left: 5px;
-    font-family: "Voces";
+    font-size: 1em;
 }
 
 }
@@ -213,6 +231,16 @@ header{
 
 /* desde aquí dará instrucciones para escritorio */
 @media only screen and (min-width: 768px) {
+    .ghibliLogo {
+        width: 436px;
+        height: 202px;
+    }
+    
+    .logo {
+        width: 436px;
+        height: 202px;   
+    }
+
     .movie{
         /* border: 2px solid blue; */
         border-radius: 15px;
@@ -235,13 +263,11 @@ header{
         border-radius: 10px;
     }
     .movie-name{
-        font-family: "Voces";
         margin-top: -7px;
         margin-left: 5px;
     }
     .year{
         margin-left: 5px;
-        font-family: "Voces";
     }
 
 }
