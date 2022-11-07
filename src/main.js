@@ -1,7 +1,7 @@
 //import { example } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/ghibli/ghibli.js';
-import {searchData, producersFilter} from './data.js';
+import {searchData, directorFilter, createMovies} from './data.js';
 
 const movieContainer = document.getElementById("movieContainer");
 const ghibliData = data.films;
@@ -9,31 +9,21 @@ const inputSearch = document.querySelector(".cards-filter");
 const movieItems = [];
 const functionResult = [searchData];
 
-ghibliData.forEach((movie)=>{
-	const movieDiv = document.createElement("div");
-	movieItems.push(movieDiv)
-  	movieDiv.innerHTML =`
-    <div class="movie" id="${movie.title}">
-    	<div class="poster-container" id="poster">
-      		<img class="img" src=${movie.poster} alt="Poster Castle_in_the_Sky"></img>
-    	</div>
-    	<div class="texto">
-    		<h3 class="movie-name">${movie.title}</h3>
-      		<p class="year">${movie.release_date}</p>
-    	</div>
-		</div>
-	`;
-  movieContainer.appendChild(movieDiv)
-})
+//filtro pagina principal
+function showAllMovies(ghibliData){
+	ghibliData.forEach(createMovies)
+}
+
+
+showAllMovies(ghibliData);
+directorFilter(ghibliData);
 
 //funcion input de busqueda, llamada desde data.js
-inputSearch.addEventListener("input", (event) => searchData(event.target.value, movieItems))
+inputSearch.addEventListener("input", (event) => searchData(event.target.value, ghibliData))
 
-directorSelector.addEventListener("click", (event) => producersFilter(directorSelector.value, ghibliData))
+// funcion filtro con input de selector
+const selectElement = document.getElementById('director');
+selectElement.addEventListener("change", (event) => directorFilter(ghibliData, event.target.value))
 
-	
-console.log(functionResult)
 
-
-  
   
