@@ -10,12 +10,12 @@
 } 
 
 body{
+    min-height: 100vh;
     display:flex;
     font-family: 'Roboto', sans-serif;
     background-color: #FFF4D8;
     background: linear-gradient(to bottom, #FFF4D8, #ffe9b0);
     flex-direction: column;
-    justify-content:center;
     margin: 0;
     /* border: 1px solid rgb(189, 16, 134); */
 }

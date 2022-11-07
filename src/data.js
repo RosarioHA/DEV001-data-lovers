@@ -1,55 +1,46 @@
-// estas funciones son de ejemplo
+//import ghibliData from './data/ghibli/ghibli.js';
 
-// export const example = () => {
-//   return 'example';
-// };
+//funcion crear tarjetas de peliculas
+export function createMovies(movie){
+	movieContainer.innerHTML = '';
+	const movieItems = [];
+	const movieDiv = document.createElement("div");
+	movieItems.push(movieDiv)
+  		movieDiv.innerHTML =`
+    	    <div class="movie" id="${movie.title}">
+    		    <div class="poster-container" id="poster">
+      			    <img class="img" src=${movie.poster} alt="Poster Castle_in_the_Sky"></img>
+    		    </div>
+    		    <div class="text" id="text">
+    			    <h3 class="movie-title">${movie.title}</h3>
+      			    <p class="year">${movie.release_date}</p>
+    		    </div>
+		    </div>
+		`;
+  	    movieContainer.appendChild(movieDiv)
+	console.log(movieItems)
+}
 
-// export const anotherExample = () => {
-//   return 'OMG';
-// };
-
-
-export function searchData (inputSearch, movieItems) {
-	movieItems.forEach(item => {
-		if (item.innerText.toLowerCase().includes(inputSearch.toLowerCase())) {
-			item.classList.remove("hide")
+//función buscador 
+export function searchData (inputSearch, ghibliData) {
+	ghibliData.forEach(movie => {
+		if (movie.innerText.toLowerCase().includes(inputSearch.toLowerCase())) {
+			return true
 		} else {
-			item.classList.add("hide")
+			return false
 		}
 	})
+	movie.forEach(createMovies)
 }
-console.log(searchData)
 
-export function producersFilter (directorSelector, ghibliData) {
- ghibliData.filter((films => {
-	if (films.director.toLowerCase().includes(directorSelector.toLowerCase())) {
-	  return true;
-    } else {
- 	  return false;
-	} 
-    }))
-    
-  };
-  console.log(producersFilter)
-
-// 	//console.log(searchData)
-// }
-
-// //TO-DO: repasar JSDOC
-// /**
-//  * 
-//  * @param {array} data 
-//  * @param {*} condition 
-//  */
-// export const filterByDirector=(ghibliData, imputSearch) => {
-//   const arrResult = ghibliData.filter((films)=>{
-//     // si el elemento cumple con la condicion, entonces deviuelvo true
-//     if (films.director == imputSearch) {
-//       return true
-//     }
-//     else {
-//       return false
-//     }
-//   })
-
-//   return arrResult;}
+//funcion filtros
+export function directorFilter(ghibliData, select){
+	const director = ghibliData.filter((movie =>{
+		if (movie.director == select) {
+			return true;
+		} else {
+			return false;
+		}
+	  }));
+	  director.forEach(createMovies)  
+	}

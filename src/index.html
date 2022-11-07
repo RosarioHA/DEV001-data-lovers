@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name= "viewport" content="width=devide-width, initial-scale=1"/>
-    <link rel="stylesheet" href="style.css" />
+    
   </head>
   <body>
     <header>
@@ -15,9 +15,14 @@
         <div class="searchContainer"> <input type="search" placeholder="  Search..." class="cards-filter"> </div>
         <img class="icon-search" src="./icono_lupa_claro.png" alt="icono de busqueda">
       </nav>
-      <select id="directorSelector">
+      <select class="select" name="director" id="director">
+        <option disabled selected>Director</option>
         <option value="Hayao Miyazaki">Hayao Miyazaki</option>
         <option value="Isao Takahata">Isao Takahata</option>
+        <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+        <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+        <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+        <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
       </select>
       <div class="movie-container" id="movieContainer">
       </div>
@@ -30,5 +35,6 @@
     </footer>
 
     <script src="main.js" type="module"></script>
+    <link rel="stylesheet" href="style.css" />
   </body>
 </html>
