@@ -1,26 +1,5 @@
 //import ghibliData from './data/ghibli/ghibli.js';
 
-//funcion crear tarjetas de peliculas
-export function createMovies(movie){
-	movieContainer.innerHTML = '';
-	const movieItems = [];
-	const movieDiv = document.createElement("div");
-	movieItems.push(movieDiv)
-  		movieDiv.innerHTML =`
-    	    <div class="movie" id="${movie.title}">
-    		    <div class="poster-container" id="poster">
-      			    <img class="img" src=${movie.poster} alt="Poster Castle_in_the_Sky"></img>
-    		    </div>
-    		    <div class="text" id="text">
-    			    <h3 class="movie-title">${movie.title}</h3>
-      			    <p class="year">${movie.release_date}</p>
-    		    </div>
-		    </div>
-		`;
-  	    movieContainer.appendChild(movieDiv)
-	console.log(movieItems)
-}
-
 //función buscador 
 export function searchData (inputSearch, ghibliData) {
 	ghibliData.forEach(movie => {
@@ -33,6 +12,8 @@ export function searchData (inputSearch, ghibliData) {
 	movie.forEach(createMovies)
 }
 
+//antes de comenzar a haer pruebas hacer consolelog de movie, movieInnterText, etc para er qué es ad
+
 //funcion filtros
 export function directorFilter(ghibliData, select){
 	const director = ghibliData.filter((movie =>{
@@ -42,5 +23,5 @@ export function directorFilter(ghibliData, select){
 			return false;
 		}
 	  }));
-	  director.forEach(createMovies)  
+	director.forEach(createMovies)  
 	}
