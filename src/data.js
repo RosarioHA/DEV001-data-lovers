@@ -12,13 +12,25 @@ export function searchData (inputSearch, ghibliData) {
 }
 
 //funcion filtros
-export function directorFilter(ghibliData, select){
-	const director = ghibliData.filter((movie =>{
-		if (movie.director == select) {
-			return true;
-		} else {
-			return false;
-		}
-	}));
-	director.forEach()  
+export const miyazakiFilter = function (ghibliData){
+	const miyazakiInfo = ghibliData.filter((films =>{
+		if (films.director == "Hayao Miyazaki")
+		return true;
+}));
+ console.log(miyazakiInfo, "esto es de HMiyazaki")
+}
+
+export const takahataFilter = function (ghibliData){
+	const takahataInfo = ghibliData.filter((films =>{
+		if (films.director == "Isao Takahata")
+		return true;
+}));
+ console.log(takahataInfo, "esto es de ITakahata")
+}
+export const kondoFilter = function (ghibliData){
+	const kondoInfo = ghibliData.filter((films =>{
+		if (films.director == "Yoshifumi Kondō")
+		return true;
+}));
+ console.log(kondoInfo, "esto es de YKondo")
 }
