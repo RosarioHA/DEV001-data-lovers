@@ -5,7 +5,6 @@ const movieContainer = document.getElementById("movieContainer");
 const ghibliData = data.films;
 const inputSearch = document.querySelector(".cards-filter");
 const movieItems = []; 
-const functionResult = [searchData];
 let movieTemplate = "";
 
 //funcion crear tarjetas de peliculas
@@ -14,7 +13,7 @@ function createMovies(movie){
 	const movieDiv = document.createElement("div");
 	movieDiv.classList.add('movie-container');
 	movieItems.push(movieDiv)
-  		movieTemplate +=`
+	movieTemplate +=`
     	    <div class="movie" id="${movie.title}">
     		    <div class="poster-container" id="poster">
       			    <img class="img" src=${movie.poster} alt="Poster Castle_in_the_Sky"></img>
@@ -25,8 +24,7 @@ function createMovies(movie){
     		    </div>
 		    </div>
 		`; movieDiv.innerHTML = movieTemplate
-  	    movieContainer.appendChild(movieDiv) //convierte a movieDiv en hijo de movieContainer
-	console.log(movieItems)
+    movieContainer.appendChild(movieDiv) //convierte a movieDiv en hijo de movieContainer
 }
 
 //filtro pagina principal
@@ -34,8 +32,8 @@ function showAllMovies(ghibliData){
 	ghibliData.forEach(createMovies)
 }
 
-//showAllMovies(ghibliData);
-//directorFilter(ghibliData);
+showAllMovies(ghibliData);
+directorFilter(ghibliData);
 
 //funcion input de busqueda, llamada desde data.js
 inputSearch.addEventListener("input", (event) => searchData(event.target.value, ghibliData))

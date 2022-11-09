@@ -1,4 +1,4 @@
-//import ghibliData from './data/ghibli/ghibli.js';
+
 
 //función buscador 
 export function searchData (inputSearch, ghibliData) {
@@ -9,10 +9,7 @@ export function searchData (inputSearch, ghibliData) {
 			return false
 		}
 	})
-	movie.forEach(createMovies)
 }
-
-//antes de comenzar a haer pruebas hacer consolelog de movie, movieInnterText, etc para er qué es ad
 
 //funcion filtros
 export function directorFilter(ghibliData, select){
@@ -22,6 +19,6 @@ export function directorFilter(ghibliData, select){
 		} else {
 			return false;
 		}
-	  }));
-	director.forEach(createMovies)  
-	}
+	}));
+	director.forEach()  
+}
