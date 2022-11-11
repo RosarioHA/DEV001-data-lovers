@@ -1,11 +1,12 @@
 import data from './data/ghibli/ghibli.js';
-import {searchData, directorFilter} from './data.js';
+import {searchData, directorFilter, yearSort} from './data.js';
 
 const ghibliData = data.films;
+//let dataForSort = data.films;
 const movieContainer = document.getElementById("movieBox");
 const inputSearch = document.querySelector(".cards-filter");
 const selectDirector = document.getElementById("director");
-
+const sortSelector = document.getElementById("sortGhibli");
 
 //función que limpia el div movieContainer
 const cleanContainer = () => {
@@ -49,6 +50,14 @@ selectDirector.addEventListener('change', (event) =>{
 	//console.log(director, "estoy en main")
 }) 
 
-
-
-  //
+//función sort con input selector
+sortSelector.addEventListener("change", (event) =>{
+	let selectorValue = event.target.value;
+	if (selectorValue !== ""){
+		const year = yearSort(ghibliData, selectorValue);
+		cleanContainer();
+		year.forEach(movie=>{
+			createMovies(movie)
+		})	
+	}
+})
