@@ -63,6 +63,7 @@ main{
     border: 3px solid #51196B; 
     border-radius: 6px;
 }
+.select:focus,
 .cards-filter:focus {
     outline: none;
 }
@@ -73,6 +74,17 @@ main{
     width: 27px;
     height: 27px;
     margin-left: 0px;
+}
+.select{
+    width: 200px;
+    height: 35px;
+    padding: 5px;
+    background: #5b336e;
+    color: #FFF9EC;
+    margin-right: 15px;
+    border: 3px solid #51196B; 
+    border-radius: 6px;
+    font-size: 1em;
 }
 .movie-container{
     display: flex;
