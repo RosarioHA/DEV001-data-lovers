@@ -1,4 +1,4 @@
-#DataLovers - Studio Ghibli
+# DataLovers - Studio Ghibli
 
 Para éste desafío se nos propuso hacer una plataforma interactiva para presentar la información de una base de datos, de manera que nuestras usuarias puedan verla, filtrarla y obtener nuevos datos a partir de ella.
 
