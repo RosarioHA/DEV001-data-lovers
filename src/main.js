@@ -27,7 +27,7 @@ function createMovies (movie){
 		</div>
 	`;
 	movieContainer.innerHTML += movieTemplate;
-}
+} 
 
 //filtro pagina principal
 function showAllMovies(ghibliData){

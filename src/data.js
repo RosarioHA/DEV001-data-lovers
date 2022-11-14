@@ -41,4 +41,4 @@ export const yearSort = (ghibliData, selectorValue) =>{
 	//ghibliData.sort(function(yearA, yearB )
 	}
 
-console.log(yearSort)
+//console.log(yearSort)
