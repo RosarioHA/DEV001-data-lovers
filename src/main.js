@@ -47,7 +47,7 @@ inputSearch.addEventListener("keyup", () => {
 
 selectDirector.addEventListener('change', (event) =>{
 	const selectDirectorValue = event.target.value;
-	if (selectDirectorValue === ""){
+	if (selectDirectorValue === "all"){
 		cleanContainer();
 		showAllMovies(ghibliData)
 	} else {
@@ -68,5 +68,7 @@ sortSelector.addEventListener("change", (event) =>{
 		dataView.forEach(movie=>{
 			createMovies(movie)
 		})	
+	} else {
+		dataView = data.films;
 	}
 })
