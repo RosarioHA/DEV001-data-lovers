@@ -2,7 +2,7 @@ import data from './data/ghibli/ghibli.js';
 import {searchData, directorFilter, yearSort} from './data.js';
 
 const ghibliData = data.films;
-//let dataForSort = data.films;
+let dataView = data.films;
 const movieContainer = document.getElementById("movieBox");
 const inputSearch = document.querySelector(".cards-filter");
 const selectDirector = document.getElementById("director");
@@ -37,26 +37,35 @@ function showAllMovies(ghibliData){
 showAllMovies(ghibliData);
 
 //funcion input de busqueda, llamada desde data.js
-inputSearch.addEventListener("input", (event) => searchData(event.target.value, ghibliData))
+inputSearch.addEventListener("keyup", () => {
+	const allMovies = searchData(ghibliData, 'title', inputSearch.value);
+	cleanContainer();
+	allMovies.forEach(createMovies);
+})
 
 // funcion filtro con input de selector
 
 selectDirector.addEventListener('change', (event) =>{
-	let director = directorFilter(ghibliData, event.target.value);
+	const selectDirectorValue = event.target.value;
+	if (selectDirectorValue === ""){
+		cleanContainer();
+		showAllMovies(ghibliData)
+	} else {
+		dataView = directorFilter(ghibliData, event.target.value);
 	cleanContainer();
-	director.forEach(movie => {
+	dataView.forEach(movie => {
 		createMovies(movie)
 	});
-	//console.log(director, "estoy en main")
+	}
 }) 
 
 //función sort con input selector
 sortSelector.addEventListener("change", (event) =>{
 	let selectorValue = event.target.value;
 	if (selectorValue !== ""){
-		const year = yearSort(ghibliData, selectorValue);
+		dataView = yearSort(dataView, selectorValue);
 		cleanContainer();
-		year.forEach(movie=>{
+		dataView.forEach(movie=>{
 			createMovies(movie)
 		})	
 	}

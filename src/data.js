@@ -1,14 +1,8 @@
 
 
 //función buscador 
-export function searchData (inputSearch, ghibliData) {
-	ghibliData.forEach(movie => {
-		if (movie.innerText.toLowerCase().includes(inputSearch.toLowerCase())) {
-			return true
-		} else {
-			return false
-		}
-	})
+export const searchData = (ghibliData, condition,value) => {
+	return ghibliData.filter(item=> item[condition].toLowerCase().includes(value.toLowerCase()));
 }
 
 //funcion filtro de director
@@ -38,7 +32,4 @@ export const yearSort = (ghibliData, selectorValue) =>{
 			}
 		})
 	}
-	//ghibliData.sort(function(yearA, yearB )
-	}
-
-//console.log(yearSort)
+}
