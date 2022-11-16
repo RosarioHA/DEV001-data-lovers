@@ -12,24 +12,28 @@
   
     <main>
       <nav id="menuBar">
-        <select class="select" name="director" id="director">
-          <option value="all">Director</option>
-          <option value="Hayao Miyazaki">Hayao Miyazaki</option>
-          <option value="Isao Takahata">Isao Takahata</option>
-          <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
-          <option value="Hiroyuki Morita">Hiroyuki Morita</option>
-          <option value="Gorō Miyazaki">Gorō Miyazaki</option>
-          <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
-        </select>
-        <select class="select" name="sort" id="sortGhibli">
-          <option value="">Sort</option>
-          <optgroup label="Sort by year">
-            <option value="asc">Ascending</option>
-            <option value="desc">Descending</option>
-          </optgroup>
-        </select>
-        <div class="searchContainer"> <input type="search" placeholder="  Search by name" class="cards-filter"> </div>
-        <img class="icon-search" src="./icono_lupa_claro.png" alt="icono de busqueda">
+        <div id="searchSection"> 
+          <input type="search" placeholder="Search by name"  class="cards-filter">
+          <img class="icon-search" src="./icono_lupa_claro.png" alt="icono de busqueda">
+        </div>
+        <div id="filtersSection">
+          <select class="select" name="director" id="director">
+            <option value="all">Director</option>
+            <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+            <option value="Isao Takahata">Isao Takahata</option>
+            <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+            <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+            <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+            <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+          </select>
+          <select class="select" name="sort" id="sortGhibli">
+            <option value="">Sort</option>
+            <optgroup label="Sort by year">
+              <option value="asc">Ascending</option>
+              <option value="desc">Descending</option>
+            </optgroup>
+          </select>
+        </div>
      </nav>
       <div class="movie-container" id="movieBox">
       </div>
