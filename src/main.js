@@ -7,6 +7,7 @@ const movieContainer = document.getElementById("movieBox");
 const inputSearch = document.querySelector(".cards-filter");
 const selectDirector = document.getElementById("director");
 const sortSelector = document.getElementById("sortGhibli");
+const showCount = document.getElementById("showCount");
 
 //función que limpia el div movieContainer
 const cleanContainer = () => {
@@ -40,6 +41,8 @@ showAllMovies(ghibliData);
 inputSearch.addEventListener("keyup", () => {
 	const allMovies = searchData(ghibliData, 'title', inputSearch.value);
 	cleanContainer();
+	const countMovie = allMovies.length;
+	showCount.innerText = "Showing " + countMovie + " results";
 	allMovies.forEach(createMovies);
 })
 
@@ -51,13 +54,17 @@ selectDirector.addEventListener('change', (event) =>{
 		cleanContainer();
 		showAllMovies(ghibliData)
 	} else {
-		dataView = directorFilter(ghibliData, event.target.value);
+		dataView = directorFilter(ghibliData, selectDirectorValue);
 	cleanContainer();
 	dataView.forEach(movie => {
+		const countMovie = dataView.length;
+		showCount.innerText = "Showing " + countMovie + " results";
 		createMovies(movie)
 	});
 	}
 }) 
+
+
 
 //función sort con input selector
 sortSelector.addEventListener("change", (event) =>{
