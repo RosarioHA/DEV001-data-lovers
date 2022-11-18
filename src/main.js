@@ -5,8 +5,8 @@ const ghibliData = data.films;
 let dataView = data.films;
 const movieContainer = document.getElementById("movieBox");
 const inputSearch = document.querySelector(".cards-filter");
-const selectDirector = document.getElementById("director");
-const sortSelector = document.getElementById("sortGhibli");
+let selectDirector = document.getElementById("director");
+let sortSelector = document.getElementById("sortGhibli");
 const showCount = document.getElementById("showCount");
 
 //función que limpia el div movieContainer
@@ -34,11 +34,12 @@ function createMovies (movie){
 function showAllMovies(ghibliData){
 	ghibliData.forEach(createMovies)
 }
-
 showAllMovies(ghibliData);
 
 //funcion input de busqueda, llamada desde data.js
 inputSearch.addEventListener("keyup", () => {
+	selectDirector.value = "all";
+	sortSelector.value= "";
 	const allMovies = searchData(ghibliData, 'title', inputSearch.value);
 	cleanContainer();
 	const countMovie = allMovies.length;
@@ -47,7 +48,6 @@ inputSearch.addEventListener("keyup", () => {
 })
 
 // funcion filtro con input de selector
-
 selectDirector.addEventListener('change', (event) =>{
 	const selectDirectorValue = event.target.value;
 	if (selectDirectorValue === "all"){
@@ -63,8 +63,6 @@ selectDirector.addEventListener('change', (event) =>{
 	});
 	}
 }) 
-
-
 
 //función sort con input selector
 sortSelector.addEventListener("change", (event) =>{
