@@ -8,6 +8,7 @@ const inputSearch = document.querySelector(".cards-filter");
 let selectDirector = document.getElementById("director");
 let sortSelector = document.getElementById("sortGhibli");
 const showCount = document.getElementById("showCount");
+const modalContainer = document.getElementById("modalContainer");
 
 //función que limpia el div movieContainer
 const cleanContainer = () => {
@@ -28,19 +29,25 @@ function createMovies (movie){
 		</div>
 	`;
 	movieContainer.innerHTML += movieTemplate;
-	document.querySelectorAll('.movie').forEach(movie => {
-        movie.addEventListener('click', () => {
-            let film_id = movie.id;
-			return alert (film_id);
-        })
-    });
 } 
 
 
 //mostrar contenido pagina principal
 function showAllMovies(ghibliData){
 	ghibliData.forEach(createMovies);
-	
+	document.querySelectorAll('.movie').forEach(movie => {
+        movie.addEventListener('click', () => {
+            let film_id = movie.id;
+			createModal(ghibliData);
+                const modal = document.getElementById("modal")
+                modal.classList.add("show");
+                const close = document.getElementById("closeModalButton")
+                close.addEventListener("click", () => {
+                    modal.classList.remove("show");
+					modal.classList.add("hide");
+                })
+            })
+        })
 }
 //evento que carga todas las peliculas al cargar la pagina
 window.addEventListener("load", () => { 
@@ -88,3 +95,23 @@ sortSelector.addEventListener("change", (event) =>{
 		dataView = data.films;
 	}
 })
+
+const createModal = (movie)=>{
+	const modal = document.createElement("dialog");
+	modal.className = "modal";
+	modal.id = "modal";
+	modal.innerHTML =
+		`<div class="divInModal">
+			<h3 class="movie-title">${movie.title}</h3>
+			<p class"info"><i class='bx bxs-star'></i> ${movie.rt_score}</p>
+			<h4 class="subtitle">Director: ${movie.director}</h4>
+        	<h4 class="subtitle">Producer: ${movie.producer}</h4>
+			<h4 class="subtitle">Resume:</h4>
+          	<p class="info">${movie.description}</p>
+        </div>
+		<button id= "closeModalButton" class="close-button"><i class='bx bxs-x-square'></i></button> 
+		`;
+	modalContainer.innerHTML = "";
+	modalContainer.appendChild(modal);
+}
+

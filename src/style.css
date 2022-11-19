@@ -161,6 +161,13 @@ main{
     display: none;
 }
 
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+
 /* DESDE AQUÍ INSTRUCCIONES PARA TABLET */
 @media only screen and (min-width: 600px) { 
 
