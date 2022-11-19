@@ -31,7 +31,6 @@ function createMovies (movie){
 	movieContainer.innerHTML += movieTemplate;
 	document.querySelectorAll('.movie').forEach(movie => {
         movie.addEventListener('click', () => {
-            let film_id = movie.id;
 			createModal(ghibliData);
 				const modal = document.getElementById("modal")
 				modal.showModal();
