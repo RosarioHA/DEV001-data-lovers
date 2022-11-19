@@ -29,25 +29,24 @@ function createMovies (movie){
 		</div>
 	`;
 	movieContainer.innerHTML += movieTemplate;
+	document.querySelectorAll('.movie').forEach(movie => {
+        movie.addEventListener('click', () => {
+            let film_id = movie.id;
+			createModal(ghibliData);
+				const modal = document.getElementById("modal")
+				modal.showModal();
+                const close = document.getElementById("closeModalButton")
+                close.addEventListener("click", () => {
+					modal.close();
+                })
+            })
+        })
 } 
 
 
 //mostrar contenido pagina principal
 function showAllMovies(ghibliData){
 	ghibliData.forEach(createMovies);
-	document.querySelectorAll('.movie').forEach(movie => {
-        movie.addEventListener('click', () => {
-            let film_id = movie.id;
-			createModal(ghibliData);
-                const modal = document.getElementById("modal")
-                modal.classList.add("show");
-                const close = document.getElementById("closeModalButton")
-                close.addEventListener("click", () => {
-                    modal.classList.remove("show");
-					modal.classList.add("hide");
-                })
-            })
-        })
 }
 //evento que carga todas las peliculas al cargar la pagina
 window.addEventListener("load", () => { 
@@ -108,10 +107,11 @@ const createModal = (movie)=>{
         	<h4 class="subtitle">Producer: ${movie.producer}</h4>
 			<h4 class="subtitle">Resume:</h4>
           	<p class="info">${movie.description}</p>
+			<button id= "closeModalButton" class="close-button"><i class='bx bxs-x-square'></i></button>
         </div>
-		<button id= "closeModalButton" class="close-button"><i class='bx bxs-x-square'></i></button> 
+		 
 		`;
 	modalContainer.innerHTML = "";
-	modalContainer.appendChild(modal);
+	movieContainer.appendChild(modal);
 }
 
