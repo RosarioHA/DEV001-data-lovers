@@ -17,7 +17,7 @@ const cleanContainer = () => {
 //funcion crear tarjetas de peliculas
 function createMovies (movie){
 	let movieTemplate = `
-		<div class="movie">
+		<div class="movie" id="${movie.id}">
 			<div class="poster-container" id="poster">
 		  		<img class="img" src=${movie.poster} alt="Poster Castle_in_the_Sky"></img>
 			</div>
@@ -28,13 +28,24 @@ function createMovies (movie){
 		</div>
 	`;
 	movieContainer.innerHTML += movieTemplate;
+	document.querySelectorAll('.movie').forEach(movie => {
+        movie.addEventListener('click', () => {
+            let film_id = movie.id;
+			return alert (film_id);
+        })
+    });
 } 
 
-//filtro pagina principal
+
+//mostrar contenido pagina principal
 function showAllMovies(ghibliData){
-	ghibliData.forEach(createMovies)
+	ghibliData.forEach(createMovies);
+	
 }
-showAllMovies(ghibliData);
+//evento que carga todas las peliculas al cargar la pagina
+window.addEventListener("load", () => { 
+    showAllMovies(ghibliData);
+});
 
 //funcion input de busqueda, llamada desde data.js
 inputSearch.addEventListener("keyup", () => {
