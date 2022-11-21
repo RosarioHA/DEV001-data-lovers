@@ -15,9 +15,19 @@ Como formato escogimos una plataforma virtual y responsiva, apta para uso en com
 
 # HU1
 
-Para nuestras usuarias es importante poder visualizar todas las animaciones de Studio Ghibli en una misma plataforma y cuáles son.
+Para nuestras usuarias es importante poder visualizar todas las animaciones de Studio Ghibli en una misma plataforma y cuáles son. Para esto propusimos una interfaz responsiva con tarjetas individuales para cada una de las películas del estudio
 
-Para esto propusimos una interfaz responsiva con tarjetas individuales para cada una de las películas del estudio
+[pantallazo primera maqueta en figma]
+[pantallazo primer prototipo testeable y desplegado en GitHub Pages]
+
+## Primeros testeos y feedback de usuarias
+## Conclusiones y desiciones de rediseño
+
+[pantallazo interfaz con cambios]
+
+# HU2
+
+Para nuestras usuarias es necesario poder buscar dentro de las tarjetas la película que desean según su nombre. Para esto agregamos un buscador interno mediante un input, que filtra los resultados incluyendo coincidencias del texto ingresado.
 
 [pantallazo primera maqueta en figma]
 [pantallazo primer prototipo testeable y desplegado en GitHub Pages]
@@ -28,11 +38,10 @@ Para esto propusimos una interfaz responsiva con tarjetas individuales para cada
 [pantallazo interfaz con cambios]
 
 
-# HU2
 
-Nuestras usuarias tienen la necesidad de poder ordenar las animaciones según año de estreno, de manera ascendente y descendente. Así mismo necesitan filtrar las películas según su director o productor.
+# HU3
 
-Para esto proponemos agregar una barra con selectores, donde la usuaria pueda elegir el criterio de orden y filtrado de las tarjetas dentro de la plataforma.
+Nuestras usuarias tienen la necesidad de poder ordenar las animaciones según año de estreno, de manera ascendente y descendente. Así mismo necesitan filtrar las películas según su director. Para esto proponemos agregar una barra con selectores, donde la usuaria pueda elegir el criterio de orden y filtrado de las tarjetas dentro de la plataforma. Nuestras usuarias también quieren conocer cuántas películas coinciden con sus filtros de busqueda.Para lograrlo, agregaremos un contador bajo la barra de menú, que indique la cantidad de películas mostradas en pantalla.
 
 pantallazo primera maqueta en figma]
 [pantallazo primer prototipo testeable y desplegado en GitHub Pages]
@@ -43,11 +52,9 @@ pantallazo primera maqueta en figma]
 [pantallazo interfaz con cambios]
 
 
-# HU3
+# HU4
 
-Nuestras usuarias quieren conocer cuantas películas coinciden con sus filtros de busqueda.
-
-Para lograrlo, agregaremos un contador bajo la barra de menú, que indique la cantidad de películas mostradas en pantalla.
+Nuestras usuarias quieren conocer más información de cada una de las películas: sinopsis, RT score, director y productor. Para lograrlo, agregaremos modal, que muestre la información extra al hacer click en las tarjetas de películas.
 
 pantallazo primera maqueta en figma]
 [pantallazo primer prototipo testeable y desplegado en GitHub Pages]
