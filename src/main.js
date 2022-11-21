@@ -9,6 +9,9 @@ let selectDirector = document.getElementById("director");
 let sortSelector = document.getElementById("sortGhibli");
 const showCount = document.getElementById("showCount");
 const modalContainer = document.getElementById("modalContainer");
+const modal = document.createElement("dialog");
+	modal.className = "modal";
+	modal.id = "modal";
 
 //función que limpia el div movieContainer
 const cleanContainer = () => {
@@ -18,11 +21,11 @@ const cleanContainer = () => {
 //funcion crear tarjetas de peliculas
 function createMovies (movie){
 	let movieTemplate = `
-		<div class="movie" id="${movie.id}">
-			<div class="poster-container" id="poster">
-		  		<img class="img" src=${movie.poster} alt="Poster Castle_in_the_Sky"></img>
+		<div class="movie">
+			<div class="poster-container" >
+		  		<img id="${movie.id}" class="img" src=${movie.poster} alt="Poster Castle_in_the_Sky"></img>
 			</div>
-			<div class="text" id="text">
+			<div class="text">
 				<h3 class="movie-name">${movie.title}</h3>
 		  		<p class="year">${movie.release_date}</p>
 			</div>
@@ -30,13 +33,15 @@ function createMovies (movie){
 	`;
 	movieContainer.innerHTML += movieTemplate;
 	document.querySelectorAll('.movie').forEach(movie => {
-        movie.addEventListener('click', () => {
-			createModal(ghibliData);
-				const modal = document.getElementById("modal")
-				modal.showModal();
-                const close = document.getElementById("closeModalButton")
-                close.addEventListener("click", () => {
-					modal.close();
+        movie.addEventListener('click', (event) => {
+			const movieId = event.target.id;
+			const modalInfo = ghibliData.filter(element =>element.id === movieId)
+			createModal(modalInfo[0]);
+				const modal = document.getElementById("modal");
+					modal.showModal();
+                const close = document.getElementById("closeModalButton");
+					close.addEventListener("click", () => {
+						modal.close();
                 })
             })
         })
@@ -95,22 +100,16 @@ sortSelector.addEventListener("change", (event) =>{
 })
 
 const createModal = (movie)=>{
-	const modal = document.createElement("dialog");
-	modal.className = "modal";
-	modal.id = "modal";
 	modal.innerHTML =
-		`<div class="divInModal">
-			<h3 class="movie-title">${movie.title}</h3>
+		`
+			<h3 class="movie-title">${movie.title}</h3><br>
 			<p class"info"><i class='bx bxs-star'></i> ${movie.rt_score}</p>
 			<h4 class="subtitle">Director: ${movie.director}</h4>
-        	<h4 class="subtitle">Producer: ${movie.producer}</h4>
+        	<h4 class="subtitle">Producer: ${movie.producer}</h4><br>
 			<h4 class="subtitle">Resume:</h4>
-          	<p class="info">${movie.description}</p>
+          	<p class="info">${movie.description}</p><br>
 			<button id= "closeModalButton" class="close-button"><i class='bx bxs-x-square'></i></button>
-        </div>
-		 
 		`;
-	modalContainer.innerHTML = "";
-	movieContainer.appendChild(modal);
+	modalContainer.appendChild(modal);
 }
 
