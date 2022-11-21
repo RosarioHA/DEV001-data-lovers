@@ -1,4 +1,4 @@
-import {directorFilter, yearSort} from '../src/data.js';
+import {directorFilter, yearSort, searchData} from '../src/data.js';
 
 
 describe('directorFilter', () => { //testea que directorFilter sea una función
@@ -45,12 +45,21 @@ describe('yearSort', () => { //testea que directorFilter sea una función
 });
 
   
-// describe('anotherExample', () => {
-//   it('is a function', () => {
-//     expect(typeof anotherExample).toBe('function');
-//   });
+ describe('searchData', () => {
+   it('is a function', () => {
+     expect(typeof searchData).toBe('function');
+   });
 
-//   it('returns `anotherExample`', () => {
-//     expect(anotherExample()).toBe('OMG');
-//   });
-// });
+   it('filtra las peliculas por nombre`', () => {
+    const data = [
+      {director: "Hayao Miyazaki", title: "Castle in the Sky"},
+      {director: "Isao Takahata", title: "Only Yesterday"},
+      {director: "Hayao Miyazaki", title: "Porco Rosso"}
+    ];
+    const condition = "title";
+    const value = "Castle in the Sky";
+    const resultadoEsperado = [{director: "Hayao Miyazaki", title: "Castle in the Sky"}];
+    const resultadoReal = searchData(data, condition,value)
+     expect(resultadoReal).toEqual(resultadoEsperado);
+   });
+ });

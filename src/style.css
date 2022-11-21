@@ -64,6 +64,7 @@ main{
     border: 3px solid #51196B; 
     border-radius: 6px;
 }
+.close-button:focus,
 .select:focus,
 .cards-filter:focus {
     outline: none;
@@ -124,7 +125,7 @@ main{
     padding: 20px;
 }
 
-.btn-search:hover,
+.close-button:hover,
 .movie:hover{
     background-color: #fddd8a;
 }
@@ -156,9 +157,30 @@ main{
     font-weight: 100;
     letter-spacing: 0.2px;
 }
-
-.movie-container div.hide {
-    display: none;
+#modal{
+    top: 15%;
+    margin: auto;
+    padding: 20px;
+    width: 400px;
+    height: 500px;
+    background-color: #FFF4D8;
+    border: 30px solid #fddd8a;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+#modal::backdrop {
+    background: rgba(36, 6, 61, 0.4);
+}
+.close-button{
+    background-color: #FFF4D8;
+    border: 0;
+}
+.bxs-x-square{
+    font-size: 3em;
+    color: #51196B;
+}
+p{
+    text-align: justify;
 }
 
 /* DESDE AQUÍ INSTRUCCIONES PARA TABLET */
