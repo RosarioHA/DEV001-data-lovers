@@ -11,11 +11,11 @@ Las animaciones tienen gran acogida a nivel mundial y algunas han recibido varia
 
 Nuestros usuarios son personas asiduas a la animación y la cultura japonesa, mostrando atracción por los clásicos que construyen éste imaginario. Algunos de ellos son los producidos por el mundialmente famoso Studio Ghibli, temática que abordaremos en nuestro proyecto.
 
-Como formato escogimos una plataforma virtual y responsiva, apta para uso en computador como también en teléfono móvil inteligente.
+Como formato escogimos una plataforma virtual y responsiva, apta para uso en computador como también en teléfono móvil inteligente y tablet.
 
 # HU1
 
-Para nuestras usuarias es importante poder visualizar todas las animaciones de Studio Ghibli en una misma plataforma y cuáles son. Para esto propusimos una interfaz responsiva con tarjetas individuales para cada una de las películas del estudio
+Para nuestras usuarias es importante poder visualizar todas las animaciones de Studio Ghibli en una misma plataforma y saber cuáles son. Para esto propusimos una interfaz responsiva, con tarjetas individuales para cada una de las películas del estudio.
 
 ### Maqueta en figma
 
@@ -27,13 +27,14 @@ Para nuestras usuarias es importante poder visualizar todas las animaciones de S
 
 ## Primeros testeos y feedback de usuarias
 ![testeo HU1 phone](https://user-images.githubusercontent.com/113854603/203367080-088eb891-5a3c-42e8-8365-66dbb3887fe6.jpg)
+
 ## Conclusiones y desiciones de rediseño
 
-[pantallazo interfaz con cambios]
+Al probar nuestra interfaz en un teléfono móvil notamos que los títulos y resto de información de las tarjetas de películas salía cortada; además, descubrimos que sería mejor vistualizar dos tarjetas de película por fila en lugar de una sola.
 
 # HU2
 
-Para nuestras usuarias es necesario poder buscar dentro de las tarjetas la película que desean según su nombre. Para esto agregamos un buscador interno mediante un input, que filtra los resultados incluyendo coincidencias del texto ingresado.
+Para nuestras usuarias es necesario poder buscar dentro de las tarjetas la película que desean según su nombre. Para ésto agregamos un buscador interno donde mediante un input, la usuaria puede encontrar las coincidencias con el texto ingresado.
 
 ### Maqueta en figma
 
@@ -47,13 +48,12 @@ Para nuestras usuarias es necesario poder buscar dentro de las tarjetas la pelí
 
 ## Conclusiones y desiciones de rediseño
 
-[pantallazo interfaz con cambios]
-
+Detectamos un defecto visual producido porque el <body> en era más pequeño que <html> en nuestro archivo.html; solucionado el porblema ya se vió mejor.
 
 
 # HU3
 
-Nuestras usuarias tienen la necesidad de poder ordenar las animaciones según año de estreno, de manera ascendente y descendente. Así mismo necesitan filtrar las películas según su director. Para esto proponemos agregar una barra con selectores, donde la usuaria pueda elegir el criterio de orden y filtrado de las tarjetas dentro de la plataforma. Nuestras usuarias también quieren conocer cuántas películas coinciden con sus filtros de busqueda.Para lograrlo, agregaremos un contador bajo la barra de menú, que indique la cantidad de películas mostradas en pantalla.
+Nuestras usuarias tienen la necesidad de poder ordenar las animaciones según año de estreno, de manera ascendente y descendente. Así mismo necesitan filtrar las películas según su director. Para esto proponemos agregar una barra con selectores, donde la usuaria pueda elegir el criterio de orden y filtrado de las tarjetas dentro de la plataforma. Nuestras usuarias también quieren conocer cuántas películas coinciden con sus filtros de búsqueda; para lograrlo, agregaremos un contador bajo la barra de menú, que indique la cantidad de películas mostradas en pantalla.
 
 ### Maqueta en figma
 
@@ -66,12 +66,12 @@ Nuestras usuarias tienen la necesidad de poder ordenar las animaciones según a�
 ![HU31](https://user-images.githubusercontent.com/113854603/203369347-e2ba361b-ed3a-46bd-998e-9909a471d103.png)
 
 ## Conclusiones y desiciones de rediseño
-[pantallazo interfaz con cambios]
 
+Notamos que los selectores eran muy pequeños en la vista de teléfono móvil y decidimos alargarlos, para facilitar la acción de "click", independiente de la mano dominante o en uso del usuario.
 
 # HU4
 
-Nuestras usuarias quieren conocer más información de cada una de las películas: sinopsis, RT score, director y productor. Para lograrlo, agregaremos modal, que muestre la información extra al hacer click en las tarjetas de películas.
+Nuestras usuarias quieren conocer más información de cada una de las películas: sinopsis, RT score, director y productor. Para lograrlo, agregaremos modales, que muestren la información extra al hacer click en cada tarjeta de película.
 
 ### Maqueta en figma
 
@@ -81,19 +81,17 @@ Nuestras usuarias quieren conocer más información de cada una de las película
 ![HU4_desplegada_desktop](https://user-images.githubusercontent.com/113854603/203370910-0f7790e9-23da-4c7f-b797-d09171adbaa7.png)
 ![HU4_modal_desktop](https://user-images.githubusercontent.com/113854603/203370986-3d789360-4b34-43f1-b4b5-ff8fb8306079.png)
 
-## Primeros testeos y feedback de usuarias
+## Testeos y feedback de usuarias en teléfono móvil
+
+Ahora que dominamos mejor las herramientas para simular vistas en distintos anchos de pantalla, nuestra interfaz final resultó verse exactamente como esperábamos. Confirmamos la desición de no poner un botón de "ver más" dentro de las tarjetas de película, ya que las usuarias intuitivamente hicieron click sobre ellas, revelando el modal con más información.
+
 ![HU4_desplegada_phone](https://user-images.githubusercontent.com/113854603/203370677-4c3f9af3-c8d5-494e-adbf-6cb1a0da6168.jpg)
 ![HU4_modal_phone](https://user-images.githubusercontent.com/113854603/203370751-616929c9-4c86-42e7-977e-0e39bba59687.jpg)
 
-## Conclusiones y desiciones de rediseño
-
-[pantallazo interfaz con cambios]
-
-![HU4_desplegada_phone](https://user-images.githubusercontent.com/113854603/203370677-4c3f9af3-c8d5-494e-adbf-6cb1a0da6168.jpg)
 
 ## Enlace
 
-Para visitar el resultado final de nuestro proyecto Data Lovers puedes seguir el siguiente enlace
+Para visitar el resultado final de nuestro proyecto Data Lovers puedes seguir el siguiente enlace:
 
 https://griseldaalonso.github.io/DEV001-data-lovers/src/
 
