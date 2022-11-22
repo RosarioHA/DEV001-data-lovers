@@ -34,7 +34,7 @@ Para nuestras usuarias es importante poder visualizar todas las animaciones de S
 Para nuestras usuarias es necesario poder buscar dentro de las tarjetas la película que desean según su nombre. Para esto agregamos un buscador interno mediante un input, que filtra los resultados incluyendo coincidencias del texto ingresado.
 
 [pantallazo primera maqueta en figma]
-[pantallazo primer prototipo testeable y desplegado en GitHub Pages]
+### Página desplegada
 ![HU2 desktop](https://user-images.githubusercontent.com/113854603/203368024-670db344-f7f6-4458-b62f-96ba38080ee4.png)
 
 ## Primeros testeos y feedback de usuarias
@@ -51,11 +51,13 @@ Para nuestras usuarias es necesario poder buscar dentro de las tarjetas la pelí
 Nuestras usuarias tienen la necesidad de poder ordenar las animaciones según año de estreno, de manera ascendente y descendente. Así mismo necesitan filtrar las películas según su director. Para esto proponemos agregar una barra con selectores, donde la usuaria pueda elegir el criterio de orden y filtrado de las tarjetas dentro de la plataforma. Nuestras usuarias también quieren conocer cuántas películas coinciden con sus filtros de busqueda.Para lograrlo, agregaremos un contador bajo la barra de menú, que indique la cantidad de películas mostradas en pantalla.
 
 pantallazo primera maqueta en figma]
-[pantallazo primer prototipo testeable y desplegado en GitHub Pages]
+### Página desplegada
+![HU3 phone 2](https://user-images.githubusercontent.com/113854603/203369241-d6489ef8-8218-4518-880e-090bea2f8a34.png)
 
 ## Primeros testeos y feedback de usuarias
-## Conclusiones y desiciones de rediseño
+![HU31](https://user-images.githubusercontent.com/113854603/203369347-e2ba361b-ed3a-46bd-998e-9909a471d103.png)
 
+## Conclusiones y desiciones de rediseño
 [pantallazo interfaz con cambios]
 
 
@@ -76,7 +78,7 @@ pantallazo primera maqueta en figma]
 
 Para visitar el resultado final de nuestro proyecto Data Lovers puedes seguir el siguiente enlace
 
-[enlace a la pagina desplegada en GitHub Pages]
+https://griseldaalonso.github.io/DEV001-data-lovers/src/
 
 
 
