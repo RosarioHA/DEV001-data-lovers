@@ -20,7 +20,8 @@ Para nuestras usuarias es importante poder visualizar todas las animaciones de S
 [pantallazo primera maqueta en figma]
 [pantallazo primer prototipo testeable y desplegado en GitHub Pages]
 
-![source](src/images/HU1 phone.jpg)
+![HU1 phone](https://user-images.githubusercontent.com/113854603/203366986-9bc1067a-15e6-421f-b6ed-f34a0a7be57c.jpg)
+![testeo HU1 phone](https://user-images.githubusercontent.com/113854603/203367080-088eb891-5a3c-42e8-8365-66dbb3887fe6.jpg)
 
 ## Primeros testeos y feedback de usuarias
 ## Conclusiones y desiciones de rediseño
