@@ -18,12 +18,13 @@ Como formato escogimos una plataforma virtual y responsiva, apta para uso en com
 Para nuestras usuarias es importante poder visualizar todas las animaciones de Studio Ghibli en una misma plataforma y cuáles son. Para esto propusimos una interfaz responsiva con tarjetas individuales para cada una de las películas del estudio
 
 [pantallazo primera maqueta en figma]
-[pantallazo primer prototipo testeable y desplegado en GitHub Pages]
+### Página desplegada
 
 ![HU1 phone](https://user-images.githubusercontent.com/113854603/203366986-9bc1067a-15e6-421f-b6ed-f34a0a7be57c.jpg)
-![testeo HU1 phone](https://user-images.githubusercontent.com/113854603/203367080-088eb891-5a3c-42e8-8365-66dbb3887fe6.jpg)
+
 
 ## Primeros testeos y feedback de usuarias
+![testeo HU1 phone](https://user-images.githubusercontent.com/113854603/203367080-088eb891-5a3c-42e8-8365-66dbb3887fe6.jpg)
 ## Conclusiones y desiciones de rediseño
 
 [pantallazo interfaz con cambios]
@@ -34,8 +35,11 @@ Para nuestras usuarias es necesario poder buscar dentro de las tarjetas la pelí
 
 [pantallazo primera maqueta en figma]
 [pantallazo primer prototipo testeable y desplegado en GitHub Pages]
+![HU2 desktop](https://user-images.githubusercontent.com/113854603/203368024-670db344-f7f6-4458-b62f-96ba38080ee4.png)
 
 ## Primeros testeos y feedback de usuarias
+![HU2 phone](https://user-images.githubusercontent.com/113854603/203368084-83f45593-e77a-497e-832e-e6184b96326d.jpg)
+
 ## Conclusiones y desiciones de rediseño
 
 [pantallazo interfaz con cambios]
